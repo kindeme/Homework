@@ -21,12 +21,12 @@ namespace Homework2
 
         private static void SortArray(int[] numbers)
         {
-            int temp =0;
-            for(int i =0; i < numbers.Length - 1; i++)
+            int temp = 0;
+            for (int i = 0; i < numbers.Length - 1; i++)
             {
-                for(int j= i+1; j < numbers.Length; j++)
+                for (int j = i + 1; j < numbers.Length; j++)
                 {
-                    if(numbers[i] > numbers[j])
+                    if (numbers[i] > numbers[j])
                     {
                         temp = numbers[i];
                         numbers[i] = numbers[j];
@@ -37,7 +37,7 @@ namespace Homework2
             Console.WriteLine("Sorted array");
             foreach (int number in numbers)
             {
- 
+
                 Console.Write(number + " ");
             }
         }
@@ -45,9 +45,9 @@ namespace Homework2
         {
             int[] newNumbers = new int[numbers.Length + 1];
             int index = numbers.Length;
-            for(int i=0; i<numbers.Length+1; i++)
+            for (int i = 0; i < numbers.Length + 1; i++)
             {
-                 if(i == index)
+                if (i == index)
                 {
                     newNumbers[i] = newNumber;
                 }
@@ -76,7 +76,7 @@ namespace Homework2
                 }
                 else
                 {
-                    newNumbers[i] = numbers[i-1];
+                    newNumbers[i] = numbers[i - 1];
                 }
             }
             Console.WriteLine();
@@ -87,7 +87,7 @@ namespace Homework2
             }
         }
 
-        private static void AddElementAtAnyPosition(int[] numbers, int newNumber,int position)
+        private static void AddElementAtAnyPosition(int[] numbers, int newNumber, int position)
         {
             int[] newNumbers = new int[numbers.Length + 1];
             for (int i = 0; i < numbers.Length + 1; i++)
@@ -96,7 +96,7 @@ namespace Homework2
                 {
                     newNumbers[i] = newNumber;
                 }
-                else if(i < position)
+                else if (i < position)
                 {
                     newNumbers[i] = numbers[i];
                 }
@@ -146,15 +146,15 @@ namespace Homework2
             int[] newArray = new int[numbers.Length - 1];
             for (int i = 0; i < numbers.Length - 1; i++)
             {
-                if(i < index)
+                if (i < index)
                 {
                     newArray[i] = numbers[i];
                 }
                 if (i >= index)
                 {
-                    newArray[i] = numbers[i+1];
+                    newArray[i] = numbers[i + 1];
                 }
-                
+
             }
             Console.WriteLine();
             Console.WriteLine("Remove element at any posiion in array");
@@ -163,7 +163,7 @@ namespace Homework2
                 Console.Write(newArray[i] + " ");
             }
         }
-        static void LoginInfo(string name,string password)
+        static void LoginInfo(string name, string password)
         {
             string myName = "Kin";
             string pwd = "21Lome";
