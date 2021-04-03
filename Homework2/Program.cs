@@ -7,10 +7,14 @@ namespace Homework2
         static void Main(string[] args)
         {
             int[] numbers = new int[] { 10, 5, 9, 87, 56 };
-          SortArray(numbers);
-           AddElementAtStart(numbers, 12);
-            AddElementAtEnd(numbers,35);
-            AddElementAtAnyPosition(numbers, 33, 4);
+            //SortArray(numbers);
+            //AddElementAtStart(numbers, 12);
+            // AddElementAtEnd(numbers,35);
+            // AddElementAtAnyPosition(numbers, 33, 4);
+            //RemoveElementAtStart(numbers);
+            //RemoveElementAtEnd(numbers);
+            // RemoveElementAtPositon(numbers, 3);
+            LoginInfo("KIN", "21lome");
 
 
         }
@@ -106,6 +110,66 @@ namespace Homework2
             for (int i = 0; i < numbers.Length + 1; i++)
             {
                 Console.Write(newNumbers[i] + " ");
+            }
+        }
+        private static void RemoveElementAtStart(int[] numbers)
+        {
+            int[] newArray = new int[numbers.Length - 1];
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                newArray[i] = numbers[i + 1];
+            }
+            Console.WriteLine();
+            Console.WriteLine("Remove first element in array");
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                Console.Write(newArray[i] + " ");
+            }
+        }
+
+        private static void RemoveElementAtEnd(int[] numbers)
+        {
+            int[] newArray = new int[numbers.Length - 1];
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                newArray[i] = numbers[i];
+            }
+            Console.WriteLine();
+            Console.WriteLine("Remove last element in array");
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                Console.Write(newArray[i] + " ");
+            }
+        }
+        private static void RemoveElementAtPositon(int[] numbers, int index)
+        {
+            int[] newArray = new int[numbers.Length - 1];
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                if(i < index)
+                {
+                    newArray[i] = numbers[i];
+                }
+                if (i >= index)
+                {
+                    newArray[i] = numbers[i+1];
+                }
+                
+            }
+            Console.WriteLine();
+            Console.WriteLine("Remove element at any posiion in array");
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                Console.Write(newArray[i] + " ");
+            }
+        }
+        static void LoginInfo(string name,string password)
+        {
+            string myName = "Kin";
+            string pwd = "21Lome";
+            if (myName.Equals(name, StringComparison.OrdinalIgnoreCase) && pwd.Equals(password, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Loggin in!");
             }
         }
     }
