@@ -7,11 +7,14 @@ namespace Homework2
         static void Main(string[] args)
         {
             int[] numbers = new int[] { 10, 5, 9, 87, 56 };
-            SortArray(numbers);
-            int[] addElementInArray = AddElementAtAnyPosition(numbers, 32, numbers.Length);
+            //SortArray(numbers);
+
+            int[] addElementInArray = AddElementAtAnyPosition(numbers, 32, numbers.Length-1);
             PrintArray(addElementInArray);
-            int[]removeElementInArray = RemoveElementAtPositon(numbers, 4);
-            PrintArray(removeElementInArray);
+
+           // int[]removeElementInArray = RemoveElementAtPositon(numbers, 4);
+           // PrintArray(removeElementInArray);
+
             LoginInfo("KIN", "21lome");
 
         }
@@ -80,7 +83,7 @@ namespace Homework2
         // Add element at the end
         private static int[] AddElementAtEnd(int[] numbers, int newNumber)
         {
-            int[] addInTheEnd = AddElementAtAnyPosition(numbers, newNumber, numbers.Length-1);
+            int[] addInTheEnd = AddElementAtAnyPosition(numbers, newNumber, numbers.Length);
 
             return addInTheEnd;
         }
